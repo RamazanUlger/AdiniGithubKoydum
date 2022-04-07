@@ -6,6 +6,6 @@ public class SilinecekClass extends User  {
     public static void main(String[] args) {
         User benutzer3=new User("","",0,false,false);
         System.out.println(benutzer3);
-
+      ////bu bir yorum satiridir
     }
 }
