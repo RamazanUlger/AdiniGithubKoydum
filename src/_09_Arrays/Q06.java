@@ -1,0 +1,43 @@
+package _09_Arrays;
+
+import java.util.Arrays;
+
+public class Q06 {
+    public static void main(String[] args) {
+	
+	/*TASK :
+	write a java program to find the second largest number in the array?
+	Maximum and minimum number in the array?
+	(Dizideki en büyük ikinci sayyiyi, maksimum ve minimum sayiyi
+	bulmak için bir java programi yazin)
+	
+	int[] arr = { 100, 10001, -90, 845, 8787, 898, 0, 1, -90 };
+	
+	*/
+        int[] arr = {100, 10001, -90, 845, 8787, 898, 0, 1, -90};
+        int enBuyukSayi = 0;
+        int enKucukSayi = 0;
+        int ikinciEnBuyuksayi = 5;
+        for (int i = 0; i < arr.length; i++) {
+            //  enBuyukSayi=arr[i];
+
+            if (enBuyukSayi < arr[i]) {
+                enBuyukSayi = arr[i];
+
+            } else if (enKucukSayi > arr[i]) {
+                enKucukSayi = arr[i];
+
+            }
+
+            if (arr[i]<enBuyukSayi && arr[i]>enKucukSayi){
+                ikinciEnBuyuksayi=arr[i];
+                System.out.print(ikinciEnBuyuksayi+" ");
+            }
+
+        }
+        System.out.println();
+        System.out.println(enBuyukSayi);
+        System.out.println(enKucukSayi);
+        System.out.println(ikinciEnBuyuksayi);
+    }
+}
