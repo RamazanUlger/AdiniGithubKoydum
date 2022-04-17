@@ -9,23 +9,21 @@ public class Q20 {
      * Beklenen Cikti: 30 ve 40 icin EBOB = 10 30 ve 40 icin EKOK = 120
      */
     public static void main(String[] args) {
-        int sayi=18;
-        int sayi2=24;
-        for (int i = 1; i <=sayi ; i++) {
-            for (int j = 1; j <sayi2 ; j++) {
-                if (sayi%i==0 && sayi2%j==0) {
-                    if (i == j) {
 
-                            System.out.println(i);
+        Scanner scan = new Scanner(System.in);
+        System.out.println(" Lutfen OBEB ve OKEK hesabı için ilk sayıyı giriniz \nikinci sayıyı icin enter e basiniz");
 
-                    }
-
-
-                }
-
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int obeb = 0;
+        int okek;
+        for (int i = 1; i <= a && i <= b; i++) {
+            if (a % i == 0 && b % i == 0) {
+                obeb = i;
             }
         }
-
-
+        okek = (a * b) / obeb;
+        System.out.println(a + " ve " + b + " sayıları için OBEB=" + obeb);
+        System.out.println(a + " ve " + b + " sayıları için OKEK=" + okek);
     }
 }

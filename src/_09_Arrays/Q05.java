@@ -1,7 +1,5 @@
 package _09_Arrays;
 
-import java.util.Arrays;
-
 public class Q05 {
 
     public static void main(String[] args) {
@@ -14,29 +12,31 @@ public class Q05 {
          * Output : 4
          */
 
-        int input[] = {1, 2, 3, 4, 5, 6, 7};
-        int arr[] = new int[input.length];
-        int istenenToplam = 0;
-        int ortalama = 0;
-        int buyukOrtalama = 0;
+        int arr[] = {1, 2, 3, 4, 5, 6, 7};
+        double toplam = 0;
 
-
-        for (int i = 0; i < input.length; i++) {
-            istenenToplam += input[i];
-
+        //for cozum...
+        for (int i = 0; i < arr.length; i++) {
+            toplam += arr[i];
         }
 
-        ortalama = istenenToplam / input.length;
-
-        for (int i = 0; i < input.length; i++) {
-            if (input[i] > ortalama) {
-                System.out.print((buyukOrtalama = input[i]) + " ");
-
-
-            }
+        //for each cozum...
+        //for (int each : arr ) {
+        //	toplam += each;
+        //}
+        double ort = toplam / arr.length;
+        System.out.println("verilen array in ortalamasi =" + ort); //4.0
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > ort)
+                System.out.println("ortalamadan buyuk olanlar :" + arr[i]);
         }
+        //for (int each : arr ) {
+        //	if (each > ort)
+        //System.out.println("ortalamadan buyuk olanlar :" + each);
 
+        //}
     }
 
 }
+
 

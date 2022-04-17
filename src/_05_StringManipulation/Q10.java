@@ -1,6 +1,5 @@
 package _05_StringManipulation;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Q10 {
@@ -21,30 +20,26 @@ public class Q10 {
 		 3) \\s   ==> space
 		 	 \\S   ==> space disindaki hersey
 	 */
+
         Scanner scan = new Scanner(System.in);
-        System.out.println("Isim ve Soyisim giriniz");
-        String isimSoyisim = "ramazan yilmaz";
-        System.out.println("Lutfen 16 haneli kart numaranizi giriniz : ");
-        String kKNo = "1234567891234567";
-        String isim = "";
-        String soyIsim = "";
+        System.out.print("Lutfen bir isim giriniz :");
+        String isim = scan.next();
+        System.out.print("Lutfen bir soyisim giriniz :");
+        String soyisim = scan.next();
+        System.out.print("Lutfen kart numaranizi giriniz :");
+        String kartno=scan.next();
 
+        if (kartno.length()==16) {
 
-        if (kKNo.length() < 16 || kKNo.length() > 16) {
-            System.out.println("Gecersiz Kredikarti!");
+            isim= isim.substring(0,1).toUpperCase() + isim.substring(1).replaceAll("\\w", "*");
+            soyisim=soyisim.substring(0,1).toUpperCase() + soyisim.substring(1).replaceAll("\\w", "*");
+            kartno="**** **** **** "+ kartno.substring(kartno.length()-4);
 
-        } else if (kKNo.length() == 16) {
-            isim = isimSoyisim.substring(0, isimSoyisim.indexOf(" ") - 1);
-            isim = isim.substring(0,1).toUpperCase() + isim.replaceAll("\\w", "*");
-            soyIsim = isimSoyisim.substring(isimSoyisim.indexOf(" ")+1, isimSoyisim.length()).toUpperCase();
-            soyIsim=soyIsim.substring(0,1)+soyIsim.replaceAll("\\w","*");
-            kKNo = kKNo.substring(0, 12).replaceAll("\\d", "*") + kKNo.substring(12, kKNo.length());
-
-
-
-            System.out.println(kKNo);
-            System.out.println(isim);
-            System.out.println(soyIsim);
+        }else {
+            System.out.print("lutfen 16 haneli kart numarasi giriniz :");
         }
+
+        System.out.println(isim + " " +  soyisim + " " + kartno);
+
     }
 }

@@ -13,15 +13,18 @@ public class Q16 {
                     --> Integer.valueOf()
          */
         String str = "ade1r4d3";
-        String[] arrStr = str.split("");
-        int toplam = 0;
-        for (int i = 0; i < arrStr.length; i++) {
-            if (Character.isDigit(arrStr[i].charAt(0))) {
-                toplam += Integer.valueOf(arrStr[i]);
+        String arr[]=str.split("");
+        System.out.println(Arrays.toString(arr));
+
+        int toplam=0;
+
+        for(int i=0; i<arr.length; i++){
+            if (Character.isDigit(arr[i].charAt(0))){
+                toplam+=Integer.valueOf(arr[i]);
             }
         }
+        System.out.println("string ifadenin sayi degerleri toplami : "+toplam);
 
-        System.out.println("Stringdeki rakamlarin toplami : " + toplam);
     }
 
 

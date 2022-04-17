@@ -19,19 +19,24 @@ public class Q13 {
          * OUTPUT : Girdiginiz cumlede "e" harfi 3 kere kullanilmis.
          */
 
-		String cumle="Java ogrenmek cok guzel";
-		char harf='e';
-		int count=0;
-		for (int i = 0; i < cumle.length() ; i++) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Lutfen bir cumle giriniz : ");
+		String cumle = scan.nextLine().toLowerCase();
+
+		System.out.println("Lutfen bir harf giriniz : ");
+		char harf=scan.next().toLowerCase(). charAt(0);
+		
+		int count = 0;
+		
+		for (int i = 0; i < cumle.length(); i++) {
+			
 			if (cumle.charAt(i)==harf) {
-
-				count++;
-
+				
+				count++;	
 			}
 		}
-		System.out.println("Cumlede e harfi "+count+" kere gecmektedir");
-		
-		
+		System.out.println("Girdiginiz cumlede " + harf +" karakteri "+ count+ " kere kullanilmistir");
+
 	}
 
 }

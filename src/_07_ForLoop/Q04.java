@@ -9,23 +9,24 @@ public class Q04 {
         Kullanıcıdan 5 adet sayı isteyiniz
         Bu sayılardan 5 ile 10 arasındakiler hariç, diğerlerinin toplamını bulunuz.
         */
-
         Scanner scan=new Scanner(System.in);
-        int input;
-        int count=0;
-        int toplam=0;
-        do {
-            System.out.println("lutfen bir sayi giriniz");
-            input= scan.nextInt();
-            if ((input<5) || (input>10)) {
-                toplam += input;
-            }
-            count++;
-        }while (count<5);{
 
+        int toplam=0;
+        for(int i=1;i<=5;i++) // 5 kez sayı isteme  kontrolu
+        {
+            System.out.print("Bir sayı giriniz : ");
+            int sayi=scan.nextInt();
+
+            if (sayi>5 && sayi<10) // 5 ile 10 arası-> 6,7,8,9
+            {
+                System.out.println("girdiğiniz sayı 5 ile 10 arası olduğundan isleme girmeyecek");
+                continue;
+            }
+
+            toplam+=sayi;
         }
-        System.out.println("Sayac artisi "+count+"'defadir");
-        System.out.println("5 ile 10 arasinda olamayan sayilarin toplami = "+toplam);
+
+        System.out.println("girdiginiz sayilarin toplamı :" + toplam);
     }
 
 }

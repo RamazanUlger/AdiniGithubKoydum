@@ -12,20 +12,12 @@ public class Q10 {
          (String iniz: "GayetBasarılı"  Diziyi "CoookBasarılı" ye cevirin )
 
          */
-        String [] arrStr={"GayetBasarılı"};
-        String str="";
-        for (int i = 0; i <arrStr.length ; i++) {
-            str+=arrStr[i];
-        }
-        System.out.println(str);
-        str=str.replaceAll("Gayet","Coook");
-        System.out.println(str);
 
-        arrStr[0]=str;
-        System.out.println(Arrays.toString(arrStr));
-
-
-
+        String str = "GayetBasarılı";
+        str = str.replace("Gayet", "Coook ");
+        String[] arr = new String[1];
+        arr[0] = str;
+        System.out.println(Arrays.toString(arr)); //[Coook Basarılı]
 
     }
 

@@ -9,22 +9,23 @@ public class Q08 {
         String’in palindrome olup olmadigini kontrol eden bir program yazin.
 
          */
+
         Scanner scan = new Scanner(System.in);
-        System.out.println("Kelime yaz!");
-        String kelime = scan.next();
+        System.out.print("Lutfen bir cumle giriniz : ");
+        String cumle = scan.nextLine();
 
-        String kont = "";
-        for (int i = kelime.length() - 1; i >= 0; i--) {
-            kont += kelime.charAt(i);
+        String terstenCumle = "";
+
+        for (int i = cumle.length() - 1; i >= 0; i--) {
+            terstenCumle += cumle.charAt(i);
         }
-        System.out.println("Tersten yazim : " + kont);
-        if (kont.equalsIgnoreCase(kelime)) {
-            System.out.println(kelime + " palindromdur");
+        if (cumle.equals(terstenCumle)) {
+            System.out.println("Cumle Polindrome");
         } else {
-            System.out.println(kelime + " palindrom degildir");
+            System.out.println("Cumle Polindrome degil");
         }
+
     }
+
 }
-
-
 

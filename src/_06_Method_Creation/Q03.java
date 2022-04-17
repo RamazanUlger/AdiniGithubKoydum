@@ -3,52 +3,37 @@ package _06_Method_Creation;
 import java.util.Scanner;
 
 public class Q03 {
-    int minute=60;
-    int sekunde=60;
-    double mile=1.609344;
-    int gram=1000;
-    static int input;
-    static Scanner scan=new Scanner(System.in);
     public static void main(String[] args) {
 
 /*      TASK :
         Saati saniyeye, mil'i kilometreye, kilogrami gram'a
         ceviren bir method yaziniz.
 
- */    Scanner scan=new Scanner(System.in);
-        input = scan.nextInt();
-        auswahl(input);
+ */
 
-        }
+        Scanner scan = new Scanner(System.in);
+        System.out.print("cevirim yapacagınız işlemi seciniz : ");
+        String islem =scan.next();
+        System.out.print("cevirim miktarını giriniz : ");
+        double miktar = scan.nextDouble();
+        donustur(islem,miktar);
+    }
 
-    private static void auswahl(int input) {
-        System.out.println("Wählen sie bitte eine unten angegebene Nummer! \n" +
-                "" +
-                "Wählen Sie bitte 1, damit es Sekunden umwandelt. \n " +
-                "Wählen Sie bitte  2, damit Mile zu Km  umwandelt. \\n \"");
-        input = scan.nextInt();
-        switch (input){
-            case 1:stundenUmwandlung();
-            break;
-            case 2:
+    private static void donustur(String islem, double miktar) {
+
+        switch (islem){
+            case "saat":
+                System.out.println("merak ettiğin saat  "+miktar*60*60+" saniyedir");
                 break;
-            case 3:
+            case "mil":
+                System.out.println("merak ettiğin mil  "+miktar*1.61+" kiometredir");
                 break;
+            case"kg":
+                System.out.println("merak ettiğin kilo  "+miktar*1000+" gramdır");
+                break;
+            default:
+                System.out.println("agam bizimle egleniiirrr. adam akıllı veri gir gelmiim oraya :-( ");
         }
     }
-
-    public static void stundenUmwandlung() {
-        Q03 obj1= new Q03();
-        System.out.println( input+" Stunde ist ="+(input*obj1.minute* obj1.sekunde)+ " Sekunden.");
-    }
-    public static  void mileUmwandlung(){
-
-    }
-    public static  void gramUmwandlug(){
-
-    }
-
-
 }
-
 

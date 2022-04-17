@@ -15,38 +15,46 @@ public class Q08 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Lutfen Aldiginiz urun adedini giriniz");
-        int urunAdet = scan.nextInt();
-        System.out.println("Lutfen aldiginiz urunun liste fiyatini giriniz");
-        int listFiyat = scan.nextInt();
-        double toplamTutar=urunAdet*listFiyat;
-        System.out.println("Indirimsiz toplam tutariniz = "+toplamTutar);
-        System.out.println("Musteri kartinizi onaylayin\n" +
-                "Evet icin E\n" +
-                "Hayir icin H");
-        char musteriKart = scan.next().toUpperCase().charAt(0);
 
-        double indirim = 0;
-        if (musteriKart == 'E') {
-            if (urunAdet >= 10) {
-                indirim = toplamTutar * 20 / 100;
-                System.out.println("Indiriminiz" + " " + indirim);
+        System.out.println("Lutfen aldiginiz urunun adedini giriniz");
+        int quantity = scan.nextInt();
+
+        System.out.println("Lutfen aldiginiz urunun liste fiyatini giriniz");
+        double price = scan.nextDouble();
+        double totalPrice;
+
+        System.out
+                .println("Musteri kartiniz var mi? Varsa Y yoksa N tusuna basiniz");
+        char card = scan.next().toLowerCase().charAt(0);
+
+        if (card == 'y') {
+            if (quantity > 10) {
+                price *= 0.8; // price = price*0.8
+                totalPrice = price * quantity;
+                System.out
+                        .println("%20 indirim hakki kazandiniz. Toplam odemeniz gereken miktar: "
+                                + totalPrice);
             } else {
-                indirim = toplamTutar* 15 / 100;
+                price *= 0.85;
+                totalPrice = price * quantity;
+                System.out
+                        .println("%15 indirim hakki kazandiniz. Toplam odemeniz gereken miktar: "
+                                + totalPrice);
+            }
+        } else if (card == 'n') {
+            if (quantity > 10) {
+                price *= 0.85;
+                totalPrice = price * quantity;
+                System.out.println("%15 indirim hakki kazandiniz. Toplam odemeniz gereken miktar: " + totalPrice);
+
+            } else {
+                price = price - price * 10 / 100;
+                totalPrice = price * quantity;
+                System.out.println("%10 indirim hakki kazandiniz. Toplam odemeniz gereken miktar: " + totalPrice);
             }
         } else {
-            if (musteriKart == 'H') {
-                if (urunAdet >= 10) {
-                    indirim = toplamTutar * 15 / 100;
-                    System.out.println("Indiriminiz" + " " + indirim);
-                } else {
-                    indirim = toplamTutar * 10 / 100;
-                    System.out.println("Indiriminiz" + " " + indirim);
-                }
-
-            }
+            System.out.println("Yanlis giris yaptiniz. Lutfen tekrar deneyiniz");
         }
-        System.out.println("Toplam tutar = " + (toplamTutar - indirim));
     }
 
 }

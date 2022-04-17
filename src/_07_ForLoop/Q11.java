@@ -8,7 +8,6 @@ public class Q11 {
         Mükemmel sayi : bir sayinin kendisi hariç bölenlerinin toplamı, kendisine eşitse o sayi mükemmeldir.
         ORNEK:
         INPUT     : 6
-        VE DIGER INPUTLAR : 28, 496, 8128, 33550336 bolenlerinin toplamlari birbirine esittir
         OUTPUT : 1,2,3
                       1+2+3 = 6 = 6 (Mükemmel)
 
@@ -21,19 +20,34 @@ public class Q11 {
 
         */
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
-        System.out.println("Bir sayi giriniz : ");
+        System.out.print("Lutfen bir sayi giriniz : ");
         int sayi = scan.nextInt();
+
+        System.out.println(checkPerfectNumber(sayi));
+        boolean flag;
+        flag = checkPerfectNumber(sayi);
+        System.out.println(flag);
+
+        String result = checkPerfectNumber(sayi) ? "Sayi mukemmel sayidir"
+                : "Sayi mukemmel sayi degildir";
+        System.out.println(result);
+    }
+
+    public static boolean checkPerfectNumber(int sayi) {
         int toplam = 0;
+        boolean flag = false; // durum kontrolu (acik kapali gibi) "flag ismi bir onem arzetmiyor"
         for (int i = 1; i < sayi; i++) {
-            if (sayi % i == 0)
-                toplam += i;
+            if (sayi % i == 0) {
+                toplam = toplam + i; // toplam += i;
+            }
         }
-        System.out.println("Sayilarin Toplami = " + toplam);
         if (toplam == sayi) {
-            System.out.println(sayi + " mukemmel bir sayidir");
-        } else System.out.println(sayi + " mukemmel bir sayi degildir");
+            flag = true;
+        }
+
+        return flag;
+
     }
 
 

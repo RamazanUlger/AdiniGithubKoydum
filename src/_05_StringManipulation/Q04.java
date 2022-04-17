@@ -6,17 +6,18 @@ public class Q04 {
     public static void main(String[] args) {
         // TASK : Kullanicidan 4 harfli bir kelime isteyin ve girilen kelimeyi tersten yazdirin
 
-        String str = "Veli";
-        String str2 = "";
-        kelimeyiTersineCevir(str);
+        Scanner scan = new Scanner(System.in);
+        System.out.print("4 harfli kelime giriniz : "); //cuma
+        String str = scan.nextLine();
 
-
-    }
-
-    public static void kelimeyiTersineCevir(String str) {
-
-        for (int i = str.length() - 1; i >= 0; i--) {
-            System.out.print(str.substring(i, i + 1));
+        if(str.length()!=4){
+            System.out.print("lütfen 4 karakterli kelime giriniz");
+        }else {
+            System.out.print("tersten kelime : "); //tersten kelime : amuc
+            System.out.print(str.substring(3));
+            System.out.print(str.substring(2,3));
+            System.out.print(str.substring(1,2));
+            System.out.print(str.substring(0,1));
 
         }
 

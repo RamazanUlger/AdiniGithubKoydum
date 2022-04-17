@@ -19,16 +19,15 @@ public class Q06 {
        ekrana basan bir kod yazabilirsiniz.
     */
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("pozitif bir tam sayı giriniz : ");
+        int sayi = scan.nextInt();
 
-
-        for (int i = 1; i <=5 ; i++) {
-            for (int j = 1; j <=5 ; j++) {
-
-                System.out.print( i*j+" ");
+        for (int baba = 1; baba <=sayi; baba++) {//satır kontrolu
+            for (int ogul = 1; ogul <=sayi; ogul++) {//sutun kontrolu
+                System.out.print(" "+(baba*ogul));
             }
-
-            System.out.println();
+            System.out.println();//2 boyutlu for da iç ve dış döngü arasına satır atlaması için boş println koyulur
         }
     }
-
 }

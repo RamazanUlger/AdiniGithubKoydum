@@ -15,19 +15,25 @@ public class Q08 {
          * input = el
          * output = el
          */
-        String str = "Ali";
-        isimOlcum(str);
-    }
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen bir string giriniz :");
+        String str = scan.next();
 
-    private static void isimOlcum(String str) {
         if (str.length() >= 3) {
-
-                str = str.substring(1,3);
-                System.out.println(str+" "+ str+" "+str);
-
-
+            System.out.println(str.substring(str.length() - 2) + str.substring(str.length() - 2) + str.substring(str.length() - 2));
         } else {
-            System.out.println("isim 3 harften kisadir");
+            System.out.println(str);
         }
+
+        /*
+         * String b = str.substring(1);
+        String c = str.substring(str.length()-2);
+
+        System.out.println(b);
+        System.out.println(c);
+
+        String a = str.substring(2);
+         *
+         */
     }
 }

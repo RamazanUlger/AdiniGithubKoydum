@@ -12,15 +12,15 @@ public class Q02 {
         input {{10,20,30},{4},{6,7,20}}==> output ={60,4,33}
 
          */
-       int arr[][]={{10,20,30},{4},{6,7,20}};
-       int toplam=0;
-        for (int i = 0; i <= arr.length-1; i++) {
-            for (int j = 0; j <arr[i].length ; j++) {
+        int arr1[][] = {{10, 20, 30}, {4}, {6, 7, 20}};
+        int arrYeni[] = new int[arr1.length];
 
-                toplam+=(arr[i][j]);
-                System.out.print(toplam+" ");
+        for (int kat = 0; kat < arr1.length; kat++) {
 
+            for (int dire = 0; dire < arr1[kat].length; dire++) {
+                arrYeni[kat] += arr1[kat][dire];
             }
         }
+        System.out.println(Arrays.toString(arrYeni));
     }
 }

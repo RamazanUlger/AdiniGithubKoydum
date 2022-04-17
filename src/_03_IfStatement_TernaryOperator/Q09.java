@@ -13,13 +13,13 @@ public class Q09 {
             Eğer double 10'a bölününce kalan 5 ise ve double 9'a bölününce kalan 0 ise
             "able to divide by 9 and divide by 10 reminder is 5" yazdırınız.
         */
+        double number = 45;
 
-        double zahl=45;
-        if (zahl%5==0 && zahl%8==0) {
-            System.out.println("5'e ve 8'e bolunebilen sayi");
+        if (number % 5 == 0 && number % 8 == 0) {
+            System.out.println("able to divide by 5 and 8");
+        } else if (number % 10 == 5 && number % 9 == 0) {
+            System.out.println("able to divide by 9 and divide by 10 reminder is 5");
         }
-        if (zahl%10==5 && zahl%9==0) {
-            System.out.println("9'a ve 10'a bolunce kalan 5'tir");
-        }
+
     }
 }

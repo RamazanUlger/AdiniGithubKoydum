@@ -13,15 +13,19 @@ public class Q03 {
          str.CharAt(0)
 
          */
-        String str = "Bugün  hava oldukca güzel";
-        int count = 0;
-        for (int i = 0; i<=str.length()-1; i++) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("bir metin giriniz : ");
+        String str = scan.nextLine();
 
-            if (str.charAt(i) == 'a') {
-                count++;
-            }else;
-
+        int aMiktar = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.toLowerCase().charAt(i) == 'a')
+                aMiktar++;
+            else if (str.toLowerCase().charAt(i) == 'c')
+                break;
         }
-        System.out.println("String'deki 'a' harfi sayiyi : " + count);
+
+        System.out.println("girdiginiz metindeki c karakterine kadar olan a karakter sayisi : "+aMiktar);
     }
+
 }

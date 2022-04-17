@@ -12,14 +12,13 @@ public class Q15 {
         şeklini yazdırınız.  65=A'nın ascıı değeri
         */
     public static void main(String[] args) {
+        int harf=65;
+        for (int satir = 0; satir <6 ; satir++) { //satır kontrolu
 
-        for (char i = 'A'; i <= 'F'; i++) {
-            for (char j = 'A'; j < i; j++) {
-                System.out.print(j + " ");
+            for (int sutun = 0; sutun <= satir; sutun++) {// sutun kontrolu
+                System.out.print((char) (harf+sutun)+" ");
             }
             System.out.println();
         }
-
-
     }
 }

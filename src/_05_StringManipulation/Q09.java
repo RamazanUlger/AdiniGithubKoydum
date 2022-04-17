@@ -13,14 +13,13 @@ public class Q09 {
 		     	INPUT      :  Python
 				OUTPUT :   Pyt
 	    */
-       String str="Python";
-
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Lutfen cift uzunlukta bir str giriniz :");
+        String str=scan.nextLine();
         if (str.length()%2==0) {
-            str=str.substring(0,str.length()/2);
-            System.out.println(str);
+            System.out.println("strnin ilkyarisi:" +str.substring(0,str.length()/2));
+        } else {
+            System.out.println("Lutfen cift uzunlukta bir str giriniz :");
         }
-
-
-
     }
 }

@@ -14,17 +14,16 @@ public class Q09 {
         // 1 x 9 = 9
         // 1 x 10 = 10
         // Yuarıdaki çarpım tablosunu 10 a kadar ekrana yazdırınız.
-        int sayi1=1;
-        int sayi2=1;
-        int toplam=0;
-        for (int i = 1; i <=10 ; i++) {
 
-            toplam=sayi1*sayi2;
 
-            System.out.println(sayi1+" "+"x"+" "+sayi2+" "+"="+" "+toplam);
-          sayi2++;
+        for(int carpan1=1;carpan1<=10;carpan1++)
+        {
+
+            for(int carpan2=1;carpan2<=10;carpan2++)
+                System.out.println(carpan1+" x "+carpan2+" = "+ (carpan1*carpan2));
+
+            System.out.println();
         }
-
 
     }
 }

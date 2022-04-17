@@ -1,7 +1,5 @@
 package _07_ForLoop;
 
-import java.util.Scanner;
-
 public class Q17 {
 
     public static void main(String[] args) {
@@ -12,20 +10,20 @@ public class Q17 {
 //           4 5 6
 //            5 6
 //             6
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Lütfen bir sayi giriniz:");
-        int sayi = scan.nextInt();
-        for (int i = 1; i <= sayi; i++) {
-            for (int j = 1; j <= sayi; j++) {
-                if (j >= i) {
-                    System.out.print(j + " ");
-                } else System.out.print(" ");
+
+        for (int satir = 1; satir <= 6; satir++) {//satır kontrolü
+
+            for (int bosluk = 1; bosluk < satir; bosluk++) {// boşluk yazdırma
+
+                System.out.print(" ");
             }
-            System.out.println("");
+            for (int rakam = satir; rakam <= 6; rakam++) {//sutun kontrolu
 
-
-
+               System.out.print(rakam + " ");// rakam+ " " olazsa sağa dayalı olur düzgün üçgen olmaz
+            }
+            System.out.println();
         }
     }
 }
+
 
