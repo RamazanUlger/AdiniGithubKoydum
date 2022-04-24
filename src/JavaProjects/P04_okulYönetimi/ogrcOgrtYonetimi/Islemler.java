@@ -72,7 +72,6 @@ public class Islemler {
                 break;
             case 4:
                 sil();
-
                 islemMenusu();
                 break;
             case 0:

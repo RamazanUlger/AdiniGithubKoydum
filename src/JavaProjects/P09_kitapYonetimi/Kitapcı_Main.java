@@ -61,7 +61,7 @@ public class Kitapcı_Main {
 				break;
 			}
 
-		} while (flag == true);
+		} while (flag);
 
 	}
 
